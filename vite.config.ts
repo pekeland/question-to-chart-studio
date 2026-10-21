@@ -5,6 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // GitHub Pages serves the site under /<repo-name>/, so asset URLs need that prefix.
+  base: process.env.BASE_PATH ?? "/",
   server: {
     host: "::",
     port: 8080,
